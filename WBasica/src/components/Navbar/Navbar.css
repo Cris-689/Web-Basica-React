@@ -30,3 +30,22 @@
 .MuiTypography-root {
   color: rgb(255, 255, 255) !important;
 }
+
+.navbar-button:hover .MuiSvgIcon-root {
+  color: rgb(6, 178, 0) !important;
+}
+
+.navbar-desktop-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .navbar-desktop-menu {
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-left: 0 !important; /* cancela el ml:4 que pusiste */
+  }
+}
