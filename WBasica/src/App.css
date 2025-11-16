@@ -1,5 +1,26 @@
-*{
-    box-sizing: border-box;
-    margin:0px;
-    padding:0px;
+.main-layout {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Columna principal */
+.content-column {
+  flex: 1;
+}
+
+/* Aside a la derecha */
+.aside-column {
+  width: 300px;
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .aside-column {
+    width: 100%;
+  }
 }

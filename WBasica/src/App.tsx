@@ -1,10 +1,13 @@
 import React from 'react';
 import Header from './components/Header/Header';
 import CardsSection from './components/CardsSection/CardsSection';
+import Aside from './components/Aside/Aside';
 
 import card1Img from './assets/images/card1.jpg';
 import card2Img from './assets/images/card2.jpg';
 import card3Img from './assets/images/card3.png';
+
+import './App.css';
 
 function App() {
   const cardsData = [
@@ -16,9 +19,17 @@ function App() {
   return (
     <div className="app-container">
       <Header />
-      <main className="main-layout">
-        <CardsSection cards={cardsData} />
-      </main>
+
+      {/* Layout de dos columnas */}
+      <div className="main-layout">
+        <div className="content-column">
+          <CardsSection cards={cardsData} />
+        </div>
+
+        <aside className="aside-column">
+          <Aside />
+        </aside>
+      </div>
     </div>
   );
 }
