@@ -1,0 +1,32 @@
+.navbar-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; 
+  text-transform: none;
+}
+
+.navbar-button .MuiSvgIcon-root {
+  font-size: 2.5rem;
+}
+
+.MuiAppBar-root {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.MuiButton-root {
+  color: rgb(255, 255, 255) !important;
+  font-weight: 500;
+}
+
+.MuiButton-root:hover {
+  color: rgb(6, 178, 0) !important;
+}
+
+.MuiSvgIcon-root {
+  color: rgb(255, 255, 255) !important;
+}
+
+.MuiTypography-root {
+  color: rgb(255, 255, 255) !important;
+}

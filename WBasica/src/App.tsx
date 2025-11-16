@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import Header from './components/Header/Header';
+import CardsSection from './components/CardsSection/CardsSection';
+
+import card1Img from './assets/images/card1.jpg';
+import card2Img from './assets/images/card2.jpg';
+import card3Img from './assets/images/card3.png';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const cardsData = [
+    { title: 'Card 1', text: 'Desasdcripción de la card 1.', img: card1Img },
+    { title: 'Card 2', text: 'Descripción de la card 2.', img: card2Img },
+    { title: 'Card 3', text: 'Descripción de la card 3.', img: card3Img },
+  ];
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="app-container">
+      <Header />
+      <main className="main-layout">
+        <CardsSection cards={cardsData} />
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;
